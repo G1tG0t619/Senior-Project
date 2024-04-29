@@ -36,10 +36,16 @@
       <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
     </div>
     <div class="w3-col s3">
-      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+      <a href="#return" class="w3-button w3-block w3-black">MAKE A RETURN</a>
+    </div>
+    <div class ="w3-col s3">
+      <a href="#history" class="w3-button w3-block w3-black">RETURN HISTORY</a>
     </div>
     <div class="w3-col s3">
-      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+      <a href = "#track" class="w3-button w3-block w3 black">TRACK RETURNS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href = "#contact" class="w3-button w3-block w3 black">CONTACT US</a>
     </div>
   </div>
 </div>
@@ -64,83 +70,113 @@
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:700px">
     <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT US </span></h5>
-    <p>This is  company found in January 2024</p>
-    <p>We are startup company,that Specialize in retruns that can not be return..</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
-    </div>
+    <p>Founded in January of 2024, ReturnIt is a company that specializes in providing fast and convenient return services.
+      Whether you're a small business owner or a customer with a item that's proven too challenging to return, ReturnIt can give you the help you need!
+      Customers will have the option to either drop-off their products at a designated ReturnIt store, or to register them for pickup. We will work with
+      companies to ensure that all products are returned efficiently and with no hassle.
+    </p>
+    <br>
     <img src="https://www.w3schools.com/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-    <p><strong>Opening hours:</strong> Everweekday mon-fri from 6am to 5pm.</p>
-    <p><strong>Address:</strong> West broad street Richmon VA,23235</p>
+    <p><strong>Providing high quality service, 24/7!</strong></p>
+    <p><strong>Key People</strong></p>
+    <p>
+      <ul>
+        <li><strong>Executive Chairman & CEO:</strong>Joshua Washington</li>
+        <li><strong>COO:</strong>:</strong>Matthew Prosise</li>
+        <li><strong>CCO:</strong>Willie Williams</li>
+      </ul>
+    </p>
   </div>
 </div>
-
-<!-- Menu Container -->
-<div class="w3-container" id="menu">
+<br>
+<!-- Return Container -->
+<div class="w3-container" id="return">
   <div class="w3-content" style="max-width:700px">
- 
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MAKE A RETURN</span></h5>
   
     <div class="w3-row w3-center w3-card w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-        <div class="w3-col s6 tablink">Eat</div>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'store-Info');" id="myLink">
+        <div class="w3-col s6 tablink">Store Info</div>
       </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-        <div class="w3-col s6 tablink">Drink</div>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'drop-off');" id="myLink">
+        <div class="w3-col s6 tablink">Drop-Off</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'pick-up');">
+        <div class="w3-col s6 tablink">Pick-Up</div>
       </a>
     </div>
-
-    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-      <h5> Quick Delivery</h5>
-      <p class="w3-text-grey">we quicky get your package over the mail  $7.50 </p><br>
-    
-      <h5>Honey Almond Granola with Fruits</h5>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h5>Review</h5>
-      <p class="w3-text-grey">services</p><br>
-    
-      <h5></h5>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h5>Blueberry Pancakes</h5>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+    <br>
+    <div id= "store-Info" class="w3-container menu w3-padding-48 w3-card">
+      <h5 class="w3-center"><span class="w3-tag w3-wide">Store Info</span></h5>
+      <br>
+      <form action = "/action_page.php" target="_blank">
+        <p><b>Store Name</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Store Name" required name = "name"></p>
+        <p><b>Address</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Address" required name = "address"></p>
+        <p><b>ID Number</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="ID #" required name = "id" value="000000"></p>
+        <br>
+        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+      </form>
     </div>
 
-    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Coffee</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p><br>
-    
-      <h5>Chocolato</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
-    
-      <h5>Corretto</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
-    
-      <h5>Iced tea</h5>
-      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
-    
-      <h5>Soda</h5>
-      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-    </div>  
+    <div id="pick-up" class="w3-container menu w3-padding-48 w3-card">
+      <h5 class="w3-center"><span class="w3-tag w3-wide">Drop-Off</span></h5>
+      <br>
+      <form action = "/action_page.php" target="_blank">
+        <p><b>Address</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Address" required name = "address"></p>
+        <p><b>Card Information</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="Card #" required name = "card" value="000000"></p>
+        <p><b>Item Quality Proof (Upload)</b></p>
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+        <br>
+        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+      </form>
+    </div>
+
+    <div id="drop-off" class="w3-container menu w3-padding-48 w3-card">
+      <h5 class="w3-center"><span class="w3-tag w3-wide">Pick-Up</span></h5>
+      <br>
+      <form action = "/action_page.php" target="_blank">
+        <p><b>Drop-Off Location</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Address" required name = "address"></p>
+        <p><b>Date and Time</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="datetime-local" placeholder="Date and Time" required name = "date" value="2024-01-01T20:00"></p>
+        <p><b>Information</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="Card #" required name = "card" value="000000"></p>
+        <p><b>Item Quality Proof (Upload)</b></p>
+        <form action="/action_page.php">
+          <input type="file" id="myFile" name="filename">
+          <input type="submit">
+        </form>
+        <br>
+        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+      </form>
+    </div>
+    <br>
     <img src="https://www.w3schools.com/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
   </div>
 </div>
-
+<br>
 <!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
+<div class="w3-container" id="contact" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
-    <p>Find us at some address at some place.</p>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT US</span></h5>
     <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image" style="width:100%">
-    <p><span class="w3-tag">News</span> The news bulletin:</p>
+    <p><b>Questions? Comments? Concerns? Contact Us</b></p>
     <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="First Name" required name="First Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Last Name" required name="Last Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Phone Number" required name="Phone"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Address" required name="address"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Question/Comment/Concern" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
     </form>
   </div>
 </div>
