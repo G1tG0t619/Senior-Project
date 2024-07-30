@@ -33,24 +33,14 @@
         <div class = "navbar">
             <ul class = "centered-list">
                 <li><a class = "active">Home</a></li>
+                <li><a class = "Login.php">Login</a></li>
                 <li><a href = "About.php"></a>About</li>
                 <li><a href = "Return.php"></a>Make a Return</li>
                 <li><a href = "History.php"></a>Return History</li>
                 <li><a href = "Contact.php"></a>Contact Us</li>
             </ul>
         </div>
+        <hr> 
         <hr>
-
-        <div class="info">
-            <h1>About Us</h1>
-            <p style="font-size: larger;">
-                Founded in January of 2024, ReturnIt is a company that specializes in providing fast and convenient return services.
-                Whether you're a small business owner or a customer with a item that's proven too challenging to return, ReturnIt can give you the help you need! 
-                Customers will have the option to either drop-off their products at a designated ReturnIt store, or to register them for pickup. 
-                We will work with companies to ensure that all products are returned efficiently and with no hassle.
-            </p>
-        </div>
-        <hr>
-
     </body>
 </html>

@@ -33,23 +33,37 @@
         <div class = "navbar">
             <ul class = "centered-list">
                 <li><a class = "Home.php">Home</a></li>
-                <li><a href = "active"></a>About</li>
+                <li><a class = "active">Login</a></li>
+                <li><a href = "About.php"></a>About</li>
                 <li><a href = "Return.php"></a>Make a Return</li>
                 <li><a href = "History.php"></a>Return History</li>
                 <li><a href = "Contact.php"></a>Contact Us</li>
             </ul>
         </div>
         <hr>
+        <form action="action_page.php" method="post">
+            <div class="imgcontainer">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
 
-        <div class="info">
-            <h1>About Us</h1>
-            <p style="font-size: larger;">
-                Founded in January of 2024, ReturnIt is a company that specializes in providing fast and convenient return services.
-                Whether you're a small business owner or a customer with a item that's proven too challenging to return, ReturnIt can give you the help you need! 
-                Customers will have the option to either drop-off their products at a designated ReturnIt store, or to register them for pickup. 
-                We will work with companies to ensure that all products are returned efficiently and with no hassle.
-            </p>
-        </div>
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
         <hr>
 
     </body>
