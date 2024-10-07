@@ -96,9 +96,8 @@
             <p><strong>Providing high quality service, 24/7!</strong></p>
             <p><strong>Key People</strong></p>
             <ul>
-                <li><strong>Executive Chairman & CEO:</strong>Joshua Washington</li>
+                <li><strong>Executive Chairman & CEO:</strong>Willie Williams</li>
                 <li><strong>COO:</strong>Matthew Prosise</li>
-                <li><strong>CCO:</strong>Willie Williams</li>
             </ul>
         </div>
     </div>
@@ -116,11 +115,11 @@
                 <h5 class="w3-center"><span class="w3-tag w3-wide">Store Info</span></h5>
                 <form action="/action_page.php" target="_blank">
                     <p><b>Store Name</b></p>
-                    <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Store Name" required name="name"></p>
+                    <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Store Name" required name="store_name"></p>
                     <p><b>Address</b></p>
                     <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Address" required name="address"></p>
                     <p><b>ID Number</b></p>
-                    <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="ID #" required name="id" value="000000"></p>
+                    <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="ID #" required name="id_number" value="000000"></p>
                     <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
                 </form>
             </div>
@@ -159,6 +158,14 @@
             </div>
             <div id="history" class="w3-container menu w3-padding-48 w3-card">
                 <h5 class="w3-center"><span class="w3-tag w3-wide">Return History</span></h5>
+                <form action="Return.php" method="post">
+                    <div class="search-container">
+                        <h1><center>Search by Item #: </center></h1>
+                        <input type="text" class="search-box" name="return_search" placeholder="Search by item number...">
+                        <button class="search-button" type="submit">Search</button>
+                    </div>
+                </form>
+                <br>
                 <ol>
                     <li><strong>Item #1</strong></li>
                     <ul>
@@ -225,6 +232,8 @@
             <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT US</span></h5>
             <p>Willie Williams - williewilliams141@gmail.com</p>
             <p> Telephone - (804) 467-2882</p>
+            <p>Matthew Prosise - mprosise998@gmail.com</p>
+            <p> Telephone - (804) 586-6275</p>
             <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image" style="width:100%">
             <p><b>Questions? Comments? Concerns? Contact Us</b></p>
             <form action="/action_page.php" target="_blank">
