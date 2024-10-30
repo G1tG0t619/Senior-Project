@@ -33,29 +33,26 @@
 <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
         <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'welcome')" class="w3-button w3-block w3-black tablink">WELCOME</a>
+            <a href = "Home.php">HOME</a>
         </div>
         <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'home')" class="w3-button w3-block w3-black tablink">HOME</a>
+            <a class = "active">LOGIN</a>
         </div>
         <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'about')" class="w3-button w3-block w3-black tablink">ABOUT</a>
+            <a href = "About.php">ABOUT</a>
         </div>
         <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'return')" class="w3-button w3-block w3-black tablink">MAKE A RETURN</a>
+            <a href = "Return.php">MAKE A RETURN</a>
         </div>
         <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'return-history')" class="w3-button w3-block w3-black tablink">RETURN HISTORY</a>
+            <a href = "History.php">HISTORY</a>
         </div>
         <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'contact')" class="w3-button w3-block w3-black tablink">CONTACT US</a>
-        </div>
-        <div class="w3-col s2">
-            <a href="javascript:void(0)" onclick="openTab(event, 'track-order')" class="w3-button w3-block w3-black tablink">TRACK ORDER</a>
+            <a href = "Contact.php">CONTACT US</a>
         </div>
     </div>
 </div>
-
+<hr>
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min menu" id="home">
     <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
@@ -72,15 +69,14 @@
     <div class = "w3-container menu" id = "login">  
         <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Login</span></h5>
-        <div id="store-Info" class="w3-container menu w3-padding-48 w3-card">
-            <h5 class="w3-center"><span class="w3-tag w3-wide">Store Info</span></h5>
-            <form action="Login_Page.php" onsubmit = "return validation()" method = "post">
-                <p><b>Username</b></p>
-                <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Username" required name="username"></p>
-                <p><b>Password</b></p>
-                <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="User Password" required name="user_password"></p>
-                <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
-            </form>
+        <h5 class="w3-center"><span class="w3-tag w3-wide">Store Info</span></h5>
+        <form action="Login_Page.php" onsubmit = "return validation()" method = "post">
+            <p><b>Username</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Username" required name="username"></p>
+            <p><b>Password</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="User Password" required name="user_password"></p>
+            <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+        </form>
         </div>
          <!-- Validation for Empty Field --> 
         <script>  
@@ -110,8 +106,8 @@
     <!-- Add this div for login input-->
     <div class = "login_input">
         <?php
-        $username = $POST['username'];
-        $user_password = $POST['user_password'];
+        $username = $_POST['username'];
+        $user_password = $_POST['user_password'];
 
         if (!empty($store_name) || !empty($username) || !empty($user_password)) {
             $servername = "localhost"; // Replace with your MySQL server name
