@@ -14,11 +14,11 @@
         .bgimg {
             background-position: center;
             background-size: cover;
-            background-image: url(https://relbox.com/wp-content/uploads/2016/03/bunch-of-boxes.png);
+            background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
             min-height: 75%;
         }
         .menu {
-            display: none;
+            display: block;
         }
         .tablink {
             cursor: pointer;
@@ -29,7 +29,6 @@
     </style>
 </head>
 <body>
-
 <!-- Links (sit on top) -->
 <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
@@ -54,6 +53,20 @@
     </div>
 </div>
 <hr>
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">24/7 Return Service!</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">ReturnIt</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">West Broad Street,Richmond VA, 23235</span>
+  </div>
+</header>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-white w3-grayscale w3-large">
 <!-- History Container -->
 <div class="w3-container menu" id="return-history">
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RETURN HISTORY</span></h5>
@@ -64,25 +77,30 @@
             <button class="search-button" type="submit">Search</button>
         </div>
     </form>
-
-    <!-- Track Order Container -->
-    <div class="w3-container menu" id="track-order">
-        <div class="w3-content" style="max-width:700px">
-            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">TRACK ORDER</span></h5>
-            <form class="w3-container w3-card w3-padding" onsubmit="return trackOrder()">
-                <p><b>Order Number</b></p>
-                <p><input id="orderNumber" class="w3-input w3-padding-12 w3-border" type="text" placeholder="Enter your order number" required></p>
-                <p><button class="w3-button w3-black" type="submit">Track</button></p>
-            </form>
-            <div id="orderStatus" class="w3-container w3-padding-48 w3-card" style="display: none;">
-                <h5 class="w3-center"><span class="w3-tag w3-wide">Order Status</span></h5>
-                <p id="orderStatusText"></p>
-            </div>
+</div>
+<!-- Track Order Container -->
+<div class="w3-container menu" id="track-order">
+    <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">TRACK ORDER</span></h5>
+        <form class="w3-container w3-card w3-padding" onsubmit="return trackOrder()">
+            <p><b>Order Number</b></p>
+            <p><input id="orderNumber" class="w3-input w3-padding-12 w3-border" type="text" placeholder="Enter your order number" required></p>
+            <p><button class="w3-button w3-black" type="submit">Track</button></p>
+        </form>
+        <div id="orderStatus" class="w3-container w3-padding-48 w3-card" style="display: none;">
+            <h5 class="w3-center"><span class="w3-tag w3-wide">Order Status</span></h5>
+            <p id="orderStatusText"></p>
         </div>
     </div>
-
-    <script src = "tracking.js"></script>
-
 </div>
+<!-- End page content -->
+</div>
+<script src = "tracking.js"></script>
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>joke</p>
+  <a class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- Footer end. -->
+ </footer>
 </body>
 </html>

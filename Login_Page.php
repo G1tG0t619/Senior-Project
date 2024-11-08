@@ -17,7 +17,7 @@
             min-height: 75%;
         }
         .menu {
-            display: none;
+            display: block;
         }
         .tablink {
             cursor: pointer;
@@ -65,94 +65,53 @@
         <span class="w3-text-white">West Broad Street, Richmond VA, 23235</span>
     </div>
 </header>
-<body>  
-    <div class = "w3-container menu" id = "login">  
-        <div class="w3-content" style="max-width:700px">
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Login</span></h5>
-        <h5 class="w3-center"><span class="w3-tag w3-wide">Store Info</span></h5>
-        <form action="Login_Page.php" onsubmit = "return validation()" method = "post">
-            <p><b>Username</b></p>
-            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Username" required name="username"></p>
-            <p><b>Password</b></p>
-            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="User Password" required name="user_password"></p>
-            <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
-        </form>
-        </div>
-         <!-- Validation for Empty Field --> 
-        <script>  
-                function validation()  
-                {  
-                    var id=document.f1.user.value;  
-                    var ps=document.f1.pass.value;  
-                    if(id.length=="" && ps.length=="") {  
-                        alert("User Name and Password fields are empty");  
-                        return false;  
-                    }  
-                    else  
-                    {  
-                        if(id.length=="") {  
-                            alert("User Name is empty");  
-                            return false;  
-                        }   
-                        if (ps.length=="") {  
-                        alert("Password field is empty");  
-                        return false;  
-                        }  
-                    }                             
-                }  
-        </script>  
-    </div>  
+<!-- Add a background color and large text to the whole page -->
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Login</span></h5>
+<form action="Login_Page.php" onsubmit = "return validation()" method = "POST">
+        <p><b>Username</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Username" required name="username"></p>
+        <p><b>Password</b></p>
+        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="User Password" required name="user_password"></p>
+        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+    </form>
+<div class="w3-white w3-grayscale w3-large">
+<div class = "w3-container menu" id = "login">  
+    <div class="w3-content" style="max-width:700px">
     
-    <!-- Add this div for login input-->
-    <div class = "login_input">
-        <?php
-        $username = $_POST['username'];
-        $user_password = $_POST['user_password'];
 
-        if (!empty($store_name) || !empty($username) || !empty($user_password)) {
-            $servername = "localhost"; // Replace with your MySQL server name
-            $username = "mpro_unidb"; // Replace with your MySQL username
-            $password = "4358"; // Replace with your MySQL password
-            $dbname = "returndb"; // Replace with your MySQL database name
-
-            $conn = new msqli($servername, $username, $password, $dbname);
-
-            if (mysqili_connect_error()){
-                die('Connect error('. mysqli_connect_errno().')' . mysqli_connect_error());
-            }
-            else{
-                $SELECT = "SELECT user_password From login_page Where user_password = ? Limit 1";
-                $INSERT = "INSERT Into login_page (username, user_password) values (?, ?)";
-
-                //Prepare select statement
-                $stmt = $conn->prepare($SELECT);
-                $stmt->bind_param("s", $user_password);
-                $stmt->execute();
-                $stmt ->bind_result($user_password);
-                $stmt->store_result();
-                $rnum = $stmt->num_rows;
-
-                if ($rnum==0){
-                    $stmt->close();
-
-                    $stmt = $conn_>prepare($INSERT);
-                    $stmt->bind_param("ss", $username, $user_password);
-                    $stmt->execute();
-                    echo "Welcome to ReturnIt!";
-                }
-                else{
-                    echo "Login failed? Check username or password and try again.";
-                }
-                $stmt->close();
-                $conn->close();
-            }
-        }
-        else{
-            echo "All fields are required";
-            die();
-        }
-        ?>
     </div>
-    
+        <!-- Validation for Empty Field --> 
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+    </script>  
+</div>
+<!-- End page content -->
+</div>
+<script src = "tracking.js"></script>
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>joke</p>
+  <a class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- Footer end. -->
+ </footer>
 </body>     
 </html>

@@ -14,11 +14,11 @@
         .bgimg {
             background-position: center;
             background-size: cover;
-            background-image: url(https://relbox.com/wp-content/uploads/2016/03/bunch-of-boxes.png);
+            background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
             min-height: 75%;
         }
         .menu {
-            display: none;
+            display: block;
         }
         .tablink {
             cursor: pointer;
@@ -54,6 +54,20 @@
     </div>
 </div>
 <hr>
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">24/7 Return Service!</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">ReturnIt</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">West Broad Street,Richmond VA, 23235</span>
+  </div>
+</header>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-white w3-grayscale w3-large">
 <!-- Contact/Area Container -->
 <div class="w3-container menu" id="contact">
     <div class="w3-content" style="max-width:700px">
@@ -74,62 +88,16 @@
             <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
         </form>
     </div>
-
-    <div class = "contact_input">
-        <?php
-            $first_name = $_POST['first_name'];
-            $last_name = $_POST['last_name'];
-            $email = $_POST['email'];
-            $phone_number = $_POST['phone_number'];
-            $user_address = $_POST['address'];
-            $user_message = $_POST['message'];
-
-
-            if (!empty($first_name) || !empty($last_name) || !empty($email) || !empty($phone_number) || !empty($user_address) || !empty($user_message)) {
-                $servername = "localhost"; // Replace with your MySQL server name
-                $username = "mpro_unidb"; // Replace with your MySQL username
-                $password = "4358"; // Replace with your MySQL password
-                $dbname = "returndb"; // Replace with your MySQL database name
-
-                $conn = new msqli($servername, $username, $password, $dbname);
-
-                if (mysqili_connect_error()){
-                    die('Connect error('. mysqli_connect_errno().')' . mysqli_connect_error());
-                }
-                else{
-                    $SELECT = "SELECT email From contact Where email = ? Limit 1";
-                    $INSERT = "INSERT Into contact (first_name, last_name, email, phone_number, user_address, user_message) values (?, ?, ?, ?, ?, ?)";
-
-                    //Prepare select statement
-                    $stmt = $conn->prepare($SELECT);
-                    $stmt->bind_param("s", $email);
-                    $stmt->execute();
-                    $stmt ->bind_result($email);
-                    $stmt->store_result();
-                    $rnum = $stmt->num_rows;
-
-                    if ($rnum==0){
-                        $stmt->close();
-
-                        $stmt = $conn_>prepare($INSERT);
-                        $stmt->bind_param("sssiss", $first_name, $last_name, $email, $phone_number, $user_address, $user_message);
-                        $stmt->execute();
-                        echo "New record inserted successfully";
-                    }
-                    else{
-                        echo "";
-                    }
-                    $stmt->close();
-                    $conn->close();
-                }
-            }
-            else{
-                echo "All fields are required";
-                die();
-            }
-        ?>
-    </div>
 </div>
 
+<!-- End page content -->
+</div>
+<script src = "tracking.js"></script>
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>joke</p>
+  <a class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- Footer end. -->
+ </footer>
 </body>
 </html>
