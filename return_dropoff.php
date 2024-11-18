@@ -1,9 +1,9 @@
 <?php
-$dropoff_location = $_POST['dropoff_location'];
+$dropoff_time = $_POST['dropoff_time'];
 $phone_number = $_POST['phone_number'];
 $email = $_POST['email'];
 
-if (!empty($dropoff_location) || !empty($phone_number) || !empty($email)) {
+if (!empty($dropoff_time) || !empty($phone_number) || !empty($email)) {
     $servername = "localhost"; // Replace with your MySQL server name
     $username = "mpro_unidb"; // Replace with your MySQL username
     $password = "4358"; // Replace with your MySQL password
@@ -16,7 +16,7 @@ if (!empty($dropoff_location) || !empty($phone_number) || !empty($email)) {
     }
     else{
         $SELECT = "SELECT email From dropoff Where email = ? Limit 1";
-        $INSERT = "INSERT Into dropoff (dropoff_location, phone_number, email) values (?, ?, ?)";
+        $INSERT = "INSERT Into dropoff (dropoff_time, phone_number, email) values (?, ?, ?)";
 
         //Prepare select statement
         $stmt = $conn->prepare($SELECT);

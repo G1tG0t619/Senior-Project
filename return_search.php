@@ -12,15 +12,20 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if(isset($_POST['pickup_history'])){
-    $search_album = $_POST['search_album'];
-    $sql = "SELECT * FROM pickup_history WHERE item_number LIKE '%$pickup_history%'";
+if(isset($_POST['return_search'])){
+    $return_search = $_POST['return_search'];
+    $sql = "SELECT * FROM pickup_history, dropoff_history WHERE item_number LIKE '%$return_search%'";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "return_type: " . $row["return_type"]. "<br>item_number: " . $row["item_number"]. "<br>store_name: " . $row["store_name"]. 
-            "<br>Lead Single: " . $row["Lead_Single"]. "<br>First Week Sales: " . $row["First_week_sales"]. "<br>Genre: " . $row["Genre"]. "<br><hr>";
+            echo "Item Number: " . $item_number["item_number"].
+            echo "Store Name: " . $store_name["store_name"].
+            echo "Store Address: " . $store_address["store_address"].
+            echo "Date and Time: " . $date_time["date_time"].
+            echo "Return Status: " . $return_status["store_name"].
+            echo "Description: " . $description["description"].
+            echo "Return Type: " . $return_type["return_type"].
         }
     } else {
         echo "No results found";

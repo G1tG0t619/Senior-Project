@@ -48,6 +48,9 @@
             <a href = "History.php">HISTORY</a>
         </div>
         <div class="w3-col s2">
+            <a href = "active">TRACK ORDERS</a>
+        </div>
+        <div class="w3-col s2">
             <a href = "Contact.php">CONTACT US</a>
         </div>
     </div>
@@ -79,12 +82,5 @@
 </div>
 <!-- End page content -->
 </div>
-
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>joke</p>
-  <a class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
- <!-- Footer end. -->
- </footer>
 </body>
 </html>

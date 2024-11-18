@@ -49,6 +49,9 @@
             <a href = "History.php">HISTORY</a>
         </div>
         <div class="w3-col s2">
+            <a href = "Tracking.php">TRACK ORDERS</a>
+        </div>
+        <div class="w3-col s2">
             <a class = "active">CONTACT US</a>
         </div>
     </div>

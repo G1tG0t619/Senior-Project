@@ -48,6 +48,9 @@
             <a href = "History.php">HISTORY</a>
         </div>
         <div class="w3-col s2">
+            <a href = "active">TRACK ORDERS</a>
+        </div>
+        <div class="w3-col s2">
             <a href = "Contact.php">CONTACT US</a>
         </div>
     </div>
@@ -67,18 +70,17 @@
 </header>
 <!-- Add a background color and large text to the whole page -->
 <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Login</span></h5>
-<form action="Login_Page.php" onsubmit = "return validation()" method = "POST">
+
+<div class="w3-white w3-grayscale w3-large">
+<div class = "w3-container menu" id = "login">  
+    <div class="w3-content" style="max-width:700px">
+    <form action="Login_Page.php" onsubmit = "return validation()" method = "POST">
         <p><b>Username</b></p>
         <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Username" required name="username"></p>
         <p><b>Password</b></p>
         <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="User Password" required name="user_password"></p>
         <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
     </form>
-<div class="w3-white w3-grayscale w3-large">
-<div class = "w3-container menu" id = "login">  
-    <div class="w3-content" style="max-width:700px">
-    
-
     </div>
         <!-- Validation for Empty Field --> 
     <script>  
