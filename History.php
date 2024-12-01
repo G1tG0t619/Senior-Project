@@ -14,7 +14,7 @@
         .bgimg {
             background-position: center;
             background-size: cover;
-            background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+            background-image: url(https://relbox.com/wp-content/uploads/2016/03/bunch-of-boxes.png);
             min-height: 75%;
         }
         .menu {

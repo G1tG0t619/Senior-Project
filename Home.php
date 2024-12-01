@@ -14,7 +14,7 @@
             .bgimg {
                 background-position: center;
                 background-size: cover;
-                background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+                background-image: url(https://relbox.com/wp-content/uploads/2016/03/bunch-of-boxes.png);
                 min-height: 75%;
             }
             .menu {
@@ -29,6 +29,25 @@
         </style>
     </head>
 <body>
+<?php
+    session_start(); // Start the session
+
+    // Check if the user is logged in
+    if (isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == true){
+        // Redirect to Login_Page.php if not logged in
+        header("Location: Login_Page.php");
+        exit;   
+    }
+
+    // Database connection
+    $conn = new mysqli("localhost", "mpro_unidb", "4358", "returndb");
+
+    // Check connection
+    if ($conn->connect_error){
+        die("Connection failed: " . $conn->connect_error);
+    }
+?>
+
 <!-- Links (sit on top) -->
 <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
@@ -36,7 +55,7 @@
             <a class = "active">HOME</a>
         </div>
         <div class="w3-col s2">
-            <a href = "Login_Page.php">LOGIN</a>
+            <a href = "Login_Page.php">ACCOUNT/LOGIN</a>
         </div>
         <div class="w3-col s2">
             <a href = "About.php">ABOUT</a>
@@ -48,7 +67,7 @@
             <a href = "History.php">HISTORY</a>
         </div>
         <div class="w3-col s2">
-            <a href = "active">TRACK ORDERS</a>
+            <a href = "Tracking.php">TRACK ORDERS</a>
         </div>
         <div class="w3-col s2">
             <a href = "Contact.php">CONTACT US</a>

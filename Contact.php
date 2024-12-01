@@ -14,7 +14,7 @@
         .bgimg {
             background-position: center;
             background-size: cover;
-            background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+            background-image: url(https://relbox.com/wp-content/uploads/2016/03/bunch-of-boxes.png);
             min-height: 75%;
         }
         .menu {
@@ -92,15 +92,7 @@
         </form>
     </div>
 </div>
-
 <!-- End page content -->
-</div>
-<script src = "tracking.js"></script>
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>joke</p>
-  <a class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
- <!-- Footer end. -->
- </footer>
+    </div>
 </body>
 </html>

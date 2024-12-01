@@ -36,9 +36,6 @@
             <a href = "Home.php">HOME</a>
         </div>
         <div class="w3-col s2">
-            <a class = "active">LOGIN</a>
-        </div>
-        <div class="w3-col s2">
             <a href = "About.php">ABOUT</a>
         </div>
         <div class="w3-col s2">
@@ -48,7 +45,7 @@
             <a href = "History.php">HISTORY</a>
         </div>
         <div class="w3-col s2">
-            <a href = "active">TRACK ORDERS</a>
+            <a href = "Tracking.php">TRACK ORDERS</a>
         </div>
         <div class="w3-col s2">
             <a href = "Contact.php">CONTACT US</a>
@@ -69,51 +66,19 @@
     </div>
 </header>
 <!-- Add a background color and large text to the whole page -->
-<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Login</span></h5>
-
 <div class="w3-white w3-grayscale w3-large">
-<div class = "w3-container menu" id = "login">  
+<h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Login</span></h5>
+<div class = "w3-container menu w3-padding-48 w3-card" id = "login"> 
     <div class="w3-content" style="max-width:700px">
-    <form action="Login_Page.php" onsubmit = "return validation()" method = "POST">
-        <p><b>Username</b></p>
-        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Username" required name="username"></p>
-        <p><b>Password</b></p>
-        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="User Password" required name="user_password"></p>
-        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+    <form action="login_input.php" method="_POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="user_password">Password:</label>
+        <input type="text" id="user_password" name="user_password" required>
+        <button type="submit">Login</button>
     </form>
     </div>
-        <!-- Validation for Empty Field --> 
-    <script>  
-            function validation()  
-            {  
-                var id=document.f1.user.value;  
-                var ps=document.f1.pass.value;  
-                if(id.length=="" && ps.length=="") {  
-                    alert("User Name and Password fields are empty");  
-                    return false;  
-                }  
-                else  
-                {  
-                    if(id.length=="") {  
-                        alert("User Name is empty");  
-                        return false;  
-                    }   
-                    if (ps.length=="") {  
-                    alert("Password field is empty");  
-                    return false;  
-                    }  
-                }                             
-            }  
-    </script>  
 </div>
-<!-- End page content -->
-</div>
-<script src = "tracking.js"></script>
-<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>joke</p>
-  <a class="w3-button w3-round-xxlarge w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
- <!-- Footer end. -->
- </footer>
 </body>     
 </html>

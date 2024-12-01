@@ -60,6 +60,18 @@
 </header>
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-white w3-grayscale w3-large">
-
+    <div id="drop-off" class="w3-container menu w3-padding-48 w3-card">
+        <h5 class="w3-center"><span class="w3-tag w3-wide">Drop-Off</span></h5>
+        <form action="return_dropoff.php" method="POST">
+            <p><b>Preferred Drop-Off Time</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="datetime-local" placeholder="Preferred Drop-Off Time" required name="dropoff_time"></p>
+            <p><b>Phone Number</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Phone Number" required name="phone_number"></p>
+            <p><b>Email</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Email" required name="email"></p>
+            <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+        </form>
+    </div>
+</div>
 </body>
 </html>

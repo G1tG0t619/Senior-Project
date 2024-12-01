@@ -1,48 +1,40 @@
 <?php
+
+// Get the form data
 $customer_address = $_POST['customer_address'];
 $phone_number = $_POST['phone_number'];
 $email = $_POST['email'];
 
-if (!empty($store_name) || !empty($customer_address) || !empty($phone_number) || !empty($email)) {
-    $servername = "localhost"; // Replace with your MySQL server name
-    $username = "mpro_unidb"; // Replace with your MySQL username
-    $password = "4358"; // Replace with your MySQL password
-    $dbname = "returndb"; // Replace with your MySQL database name
+// Database connection
+$servername = "localhost";
+$username = "mpro_unidb";
+$password = "4358";
+$dbname = "returndb";
 
-    $conn = new msqli($servername, $username, $password, $dbname);
+// Create a connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if (mysqili_connect_error()){
-        die('Connect error('. mysqli_connect_errno().')' . mysqli_connect_error());
-    }
-    else{
-        $SELECT = "SELECT email From pickup Where email = ? Limit 1";
-        $INSERT = "INSERT Into pickup (customer_address, phone_number, email) values (?, ?, ?)";
-
-        //Prepare select statement
-        $stmt = $conn->prepare($SELECT);
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $stmt ->bind_result($email);
-        $stmt->store_result();
-        $rnum = $stmt->num_rows;
-
-        if ($rnum==0){
-            $stmt->close();
-
-            $stmt = $conn_>prepare($INSERT);
-            $stmt->bind_param("sis", $customer_address, $phone_number, $email);
-            $stmt->execute();
-            echo "New record inserted successfully";
-        }
-        else{
-            echo "";
-        }
-        $stmt->close();
-        $conn->close();
-    }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-else{
-    echo "All fields are required";
-    die();
+
+// Prepare and execute the SQL statement
+$sql = "INSERT INTO pickup (customer_address, phone_number, email) VALUES (?, ?, ?)";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("sss", $customer_address, $phone_number, $email); 
+
+if ($stmt->execute()) {
+    echo "New record created successfully";
+    echo "<br>";
+    // Redirect to Return.php on success
+    echo "<a href='Return.php' class='w3-button w3-black'>Back to Return Page</a>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+// Close the statement and connection
+$stmt->close();
+$conn->close();
+
 ?>

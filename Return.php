@@ -14,7 +14,7 @@
         .bgimg {
             background-position: center;
             background-size: cover;
-            background-image: url("https://www.w3schools.com/w3images/coffeehouse.jpg");
+            background-image: url(https://relbox.com/wp-content/uploads/2016/03/bunch-of-boxes.png);
             min-height: 75%;
         }
         .menu {
@@ -44,9 +44,6 @@
             <a href = "Home.php">HOME</a>
         </div>
         <div class="w3-col s2">
-            <a href = "Login_Page.php">LOGIN</a>
-        </div>
-        <div class="w3-col s2">
             <a href = "About.php">ABOUT</a>
         </div>
         <div class="w3-col s2">
@@ -60,6 +57,9 @@
         </div>
         <div class="w3-col s2">
             <a href = "Contact.php">CONTACT US</a>
+        </div>
+        <div class="w3-col s2">
+            <a href = "Logout.php">LOGOUT</a>
         </div>
     </div>
 </div>
@@ -116,43 +116,11 @@
                     mysqli_close($con);
                 ?>
             </div>
-
             <div id="return-options" class="w3-container menu w3-padding-48 w3-card" style="display: none;">
                 <h5 class="w3-center"><span class="w3-tag w3-wide">Return Options</span></h5>
                 <br>
-                <form action="process_return.php" method="_POST">
-                    <select id="return-type" name="return-type">
-                        <option value="drop-off">Drop-Off</option>
-                        <option value="pick-up">Pick-Up</option>
-                    </select>
-                    <button class="w3-button w3-black" type="sumbit">SUBMIT</button>
-                </form>
-                <br>
-                <div id="drop-off" class="w3-container menu w3-padding-48 w3-card">
-                    <h5 class="w3-center"><span class="w3-tag w3-wide">Drop-Off</span></h5>
-                    <form action="return_dropoff.php" method="_POST">
-                        <p><b>Store Name</b></p>
-                        <p><b>Drop-Off Location</b></p>
-                        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Dropoff Location" required name="dropoff_location"></p>
-                        <p><b>Phone Number</b></p>
-                        <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="Phone Number" required name="phone_number"></p>
-                        <p><b>Email</b></p>
-                        <p><input class="w3-input w3-padding-12 w3-border" type="email" placeholder="Email" required name="email"></p>
-                        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
-                    </form>
-                </div>
-                <div id="pick-up" class="w3-container menu w3-padding-48 w3-card">
-                    <h5 class="w3-center"><span class="w3-tag w3-wide">Pick-Up</span></h5>
-                    <form action="return_pickup.php" method="_POST">
-                        <p><b>Customer Address</b></p>
-                        <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Customer Address" required name="customer_address"></p>
-                        <p><b>Phone Number</b></p>
-                        <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="Phone Number" required name="phone_number"></p>
-                        <p><b>Email</b></p>
-                        <p><input class="w3-input w3-padding-12 w3-border" type="email" placeholder="Email" required name="email"></p>
-                        <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
-                    </form>
-                </div>
+                <a href="dropoff.php" class="w3-button w3-black">Drop-Off</a>
+                <a href="pickup.php" class="w3-button w3-black">Pick-Up</a>
             </div>
         </div>
     </div>
@@ -188,20 +156,6 @@
 
     // Get the return-type dropdown element
     var returnTypeDropdown = document.getElementById('return-type');
-
-    // Add an event listener to the dropdown
-    returnTypeDropdown.addEventListener('change', function() {
-        var selectedType = this.value;
-
-        // Hide all subtabs
-        var subtabs = document.querySelectorAll('.w3-container.menu.w3-padding-48.w3-card');
-        subtabs.forEach(tab => {
-            tab.style.display = 'none';
-        });
-
-        // Show the selected subtab
-        document.getElementById(selectedType).style.display = 'block';
-    });
 </script>
 </body>
 </html>

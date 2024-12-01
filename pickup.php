@@ -60,6 +60,18 @@
 </header>
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-white w3-grayscale w3-large">
-
+    <div id="pick-up" class="w3-container menu w3-padding-48 w3-card">
+        <h5 class="w3-center"><span class="w3-tag w3-wide">Pick-Up</span></h5>
+        <form action="return_pickup.php" method="POST">
+            <p><b>Customer Address</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="text" placeholder="Customer Address" required name="customer_address"></p>
+            <p><b>Phone Number</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="number" placeholder="Phone Number" required name="phone_number"></p>
+            <p><b>Email</b></p>
+            <p><input class="w3-input w3-padding-12 w3-border" type="email" placeholder="Email" required name="email"></p>
+            <p><button class="w3-button w3-black" type="submit">ENTER</button></p>
+        </form>
+    </div>
+</div>
 </body>
 </html>
